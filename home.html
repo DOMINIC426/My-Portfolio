@@ -3,308 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dominic Nazareth | Software Engineer</title>
+    
+    <!-- Primary Search & SEO Metadata -->
+    <title>Dominic Nazareth | Software Engineer & Backend Developer</title>
+    <meta name="title" content="Dominic Nazareth | Software Engineer & Backend Developer">
+    <meta name="description" content="Portfolio of Dominic Nazareth, a Software Engineering student at the University of Dodoma (UDOM) specializing in Java, Spring Boot, Docker, and full-stack web development.">
+    <meta name="keywords" content="Dominic Nazareth, Dominic Nazareth Mwaituka, Software Engineer Tanzania, Java Developer Dodoma, Spring Boot Developer, UDOM Software Engineering, Web Developer Tanzania, Docker, React, Tailwind CSS">
+    <meta name="author" content="Dominic Nazareth">
+    <meta name="robots" content="index, follow">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="e2l-wObJoKpVrTxLxBLwUlgiLPnuCwu0ibri4KTEJsk" />
+
+    <!-- Open Graph / Social Media Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Dominic Nazareth | Software Engineer">
+    <meta property="og:description" content="Backend & Full-Stack Developer specializing in Java, Spring Boot, and cloud deployment. Currently studying at UDOM.">
+    <meta property="og:image" content="https://yourdomain.com/assets/portfolio-preview.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dominic Nazareth | Software Engineer">
+    <meta name="twitter:description" content="Backend & Full-Stack Developer specializing in Java, Spring Boot, and cloud deployment. Currently studying at UDOM.">
+    <meta name="twitter:image" content="https://yourdomain.com/assets/portfolio-preview.png">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dominic Nazareth",
+      "jobTitle": "Software Engineer",
+      "almaMater": "University of Dodoma",
+      "knowsAbout": ["Java", "Spring Boot", "Docker", "Tailwind CSS", "JavaScript", "PostgreSQL"],
+      "url": "https://yourdomain.com"
+    }
+    </script>
+
+    <!-- Tailwind CSS & FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
+        :root {
+            --bg-base: #f8fafc;
+            --panel: rgba(255, 255, 255, 0.95);
+            --brand-orange: #f97316;
+            --brand-teal: #0d9488;
+            --ink: #0f172a;
+            --muted: #475569;
+            --border: rgba(226, 232, 240, 0.8);
+        }
+
+        body { 
+            background-color: var(--bg-base); 
+            color: var(--ink);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        .glass { 
+            background: var(--panel); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid var(--border); 
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04); 
+        }
+
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-10px); }
         }
-        @keyframes pulse-ring {
-            0% { box-shadow: 0 0 0 0 rgba(34, 211, 238, 0.5); }
-            100% { box-shadow: 0 0 0 16px rgba(34, 211, 238, 0); }
-        }
+
         .animate-float { animation: float 4s ease-in-out infinite; }
-        .animate-pulse-ring { animation: pulse-ring 2.5s ease-out infinite; }
-        .glass { background: rgba(148, 233, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(56, 224, 255, 0.1); }
-        .project-card:hover .project-image { transform: scale(1.1); }
-        .project-card:hover { border-color: #22d3ee; box-shadow: 0 25px 50px -12px rgba(34, 211, 238, 0.25); }
-        .stack-card:hover { border-color: rgba(34, 211, 238, 0.4); transform: translateY(-4px); }
-        body { background-color: #030b12; color: #a8bfcf; }
-        .text-gradient { background: linear-gradient(to right, #22d3ee, #34d399); -webkit-text-fill-color: transparent; }
-        .grid-bg { background-image: radial-gradient(#0f2b38 1px, transparent 1px); background-size: 30px 30px; }
-        .circuit-glow { background: radial-gradient(circle, rgba(34,211,238,0.12), transparent 70%); }
+        .grid-bg { background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 28px 28px; }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(249, 115, 22, 0.3);
+            box-shadow: 0 25px 40px -10px rgba(15, 23, 42, 0.12);
+        }
+        .project-card .project-image-container {
+            transition: transform 0.6s ease;
+        }
+        .project-card:hover .project-image-container {
+            transform: scale(1.05);
+        }
     </style>
 </head>
-<body class="selection:bg-cyan-500 selection:text-white grid-bg">
+<body class="selection:bg-orange-500 selection:text-white grid-bg">
 
-    <nav class="fixed top-0 w-full z-50 glass border-b border-cyan-500/10">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h2 class="text-xl font-black tracking-tighter text-white">DOMINIC<span class="text-cyan-400">.DEV</span></h2>
-            <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest">
-                <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-                <a href="#about" class="hover:text-cyan-400 transition">About</a>
-                <a href="#stack" class="hover:text-cyan-400 transition">Stack</a>
-                <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
-                <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
-                <a href="#contact" class="px-4 py-2 bg-cyan-500/10 rounded-lg hover:bg-cyan-500/20 transition border border-cyan-400/30 text-cyan-300">
-                    <i class="fas fa-paper-plane mr-2"></i>Contact
+            <h2 class="text-xl font-black tracking-tighter text-slate-900">DOMINIC<span class="text-orange-500">.DEV</span></h2>
+            <div class="hidden md:flex items-center space-x-6 text-xs font-bold uppercase tracking-widest text-slate-700">
+                <a href="#home" class="hover:text-orange-500 transition">Home</a>
+                <a href="#stack" class="hover:text-orange-500 transition">Stack</a>
+                <a href="#about" class="hover:text-orange-500 transition">About</a>
+                <a href="#projects" class="hover:text-orange-500 transition">Projects</a>
+                <a href="#experience" class="hover:text-orange-500 transition">Experience</a>
+                <a href="/resume.pdf" download class="hover:text-orange-500 transition flex items-center gap-1 text-orange-600">
+                    <i class="fas fa-file-arrow-down"></i> Resume
+                </a>
+                <a href="https://wa.me/255677472870" target="_blank" class="px-5 py-2.5 bg-green-500 text-white rounded-lg hover:bg-green-600 transition shadow-md shadow-green-500/20">
+                    <i class="fab fa-whatsapp mr-2"></i>Chat
                 </a>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="relative flex flex-col items-center justify-center min-h-screen px-6 pt-24 overflow-hidden">
-        <div class="absolute inset-0 -z-20">
-            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] circuit-glow"></div>
-            <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] circuit-glow"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#030b12]"></div>
-        </div>
-
+    <!-- Header Section -->
+    <header id="home" class="relative flex flex-col items-center justify-center min-h-screen px-6 pt-24">
         <div class="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
             <div class="text-center lg:text-left">
-                <p class="text-cyan-400 font-bold text-xs uppercase tracking-[0.4em] mb-4">Hello, I'm</p>
-                <h1 class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter leading-tight">DOMINIC<br>NAZARETH.</h1>
-                <p class="text-lg md:text-xl text-slate-400 font-medium mb-8 max-w-md mx-auto lg:mx-0">
-                    Developer &amp; CS Student. Crafting efficient software, currently studying at the
-                    <span class="text-cyan-400">University of Dodoma (UDOM)</span>.
+                <p class="text-orange-500 font-extrabold text-xs uppercase tracking-[0.4em] mb-4">Hello, I'm</p>
+                <h1 class="text-4xl md:text-6xl font-black text-slate-900 mb-4 tracking-tighter leading-tight">DOMINIC<br>NAZARETH.</h1>
+                <p class="text-lg text-slate-600 font-medium mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed">
+                    Software Engineer &amp; CS Student crafting scalable web and backend systems at the 
+                    <span class="text-teal-700 font-bold">University of Dodoma (UDOM)</span>.
                 </p>
                 <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-cyan-500 text-[#031018] font-bold rounded-full hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/20">Explore My Work</a>
-                    <a href="https://github.com/DOMINIC426" target="_blank" class="px-8 py-4 glass text-white font-bold rounded-full hover:bg-white/5 transition">GitHub Profile</a>
+                    <a href="#projects" class="px-8 py-4 bg-orange-500 text-white font-bold rounded-full hover:bg-orange-600 transition shadow-lg shadow-orange-500/20">Explore My Work</a>
+                    <a href="https://github.com/DOMINIC426" target="_blank" class="px-8 py-4 glass text-slate-900 font-bold rounded-full hover:bg-slate-100 transition border border-slate-300">GitHub Profile</a>
                 </div>
             </div>
 
             <div class="relative flex justify-center animate-float">
-                <div class="absolute -inset-3 bg-gradient-to-r from-cyan-500 to-emerald-400 rounded-[2.5rem] blur opacity-20"></div>
-                <div class="relative glass rounded-[2.5rem] p-3">
+                <div class="relative glass rounded-[2.5rem] p-3 border border-slate-200">
                     <img src="me.jpg" alt="Dominic Nazareth" class="w-64 h-80 md:w-72 md:h-96 rounded-[2rem] object-cover">
-                </div>
-                <div class="absolute -top-5 -right-5 w-16 h-16 rounded-full bg-[#04121c] border border-cyan-400/40 flex items-center justify-center text-cyan-300 text-xl animate-pulse-ring">
-                    <i class="fas fa-graduation-cap"></i>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-24">
+    <main class="max-w-7xl mx-auto px-6 py-12">
 
+        <!-- Tech Stack Section -->
         <section id="stack" class="mb-32">
             <div class="text-center mb-16">
-                <h2 class="text-cyan-400 font-bold text-xs uppercase tracking-[0.5em] mb-4">Technologies</h2>
-                <h3 class="text-4xl md:text-5xl font-black text-white">Tech Stack</h3>
+                <h2 class="text-orange-500 font-bold text-xs uppercase tracking-[0.5em] mb-4">Technologies</h2>
+                <h3 class="text-3xl md:text-4xl font-black text-slate-900">Tech Stack</h3>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fab fa-html5 text-orange-400 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">HTML5</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fab fa-html5 text-orange-500 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">HTML5</p>
                 </div>
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fab fa-css3-alt text-blue-400 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">CSS3</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fab fa-css3-alt text-blue-500 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">CSS3</p>
                 </div>
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fas fa-wind text-cyan-400 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">Tailwind CSS</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fas fa-wind text-teal-500 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">Tailwind CSS</p>
                 </div>
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fab fa-react text-cyan-300 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">React</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fab fa-react text-sky-500 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">React</p>
                 </div>
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fab fa-js text-yellow-400 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">JavaScript</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fab fa-js text-yellow-500 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">JavaScript</p>
                 </div>
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fab fa-java text-red-400 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">Java</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fab fa-java text-red-500 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">Java</p>
                 </div>
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fas fa-leaf text-green-400 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">Spring Boot</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fas fa-leaf text-emerald-500 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">Spring Boot</p>
                 </div>
-                <div class="stack-card glass rounded-2xl p-6 text-center transition-all duration-300">
-                    <i class="fab fa-docker text-blue-300 text-3xl mb-3"></i>
-                    <p class="text-white text-xs font-black uppercase tracking-widest">Docker</p>
+                <div class="card-hover glass rounded-2xl p-6 text-center">
+                    <i class="fab fa-docker text-blue-600 text-4xl mb-3"></i>
+                    <p class="text-slate-900 text-xs font-black uppercase tracking-widest">Docker</p>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="mb-32">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="glass rounded-[2.5rem] p-10">
-                    <h2 class="text-cyan-400 font-bold text-xs uppercase tracking-[0.4em] mb-4">Who I Am</h2>
-                    <h3 class="text-3xl font-black text-white mb-6">About Me</h3>
-                    <p class="text-slate-400 leading-relaxed mb-8">
-                        I'm a passionate Computer Science student at the University of Dodoma (UDOM), Tanzania,
-                        focusing on building scalable web and backend systems. I'm deepening my skills in modern
-                        technologies, from Spring Boot APIs to responsive front-end interfaces.
+                    <h2 class="text-orange-500 font-bold text-xs uppercase tracking-[0.4em] mb-4">Who I Am</h2>
+                    <h3 class="text-3xl font-black text-slate-900 mb-6">About Me</h3>
+                    <p class="text-slate-600 leading-relaxed mb-8">
+                        I'm a dedicated Computer Science student at the University of Dodoma (UDOM), Tanzania. 
+                        My primary technical focus is building secure, scalable backend architectures with Java and Spring Boot while crafting clean, modern user interfaces.
                     </p>
-                    <div class="flex gap-5 text-xl">
-                        <a href="https://github.com/DOMINIC426" target="_blank" class="w-11 h-11 rounded-full glass flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400/40 transition"><i class="fab fa-github"></i></a>
-                        <a href="https://wa.me/255784505948" target="_blank" class="w-11 h-11 rounded-full glass flex items-center justify-center text-slate-300 hover:text-emerald-400 hover:border-emerald-400/40 transition"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:nazarethdominic189@gmail.com" class="w-11 h-11 rounded-full glass flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-400/40 transition"><i class="fas fa-envelope"></i></a>
+                    <div class="flex gap-4 text-xl">
+                        <a href="https://github.com/DOMINIC426" target="_blank" class="w-11 h-11 rounded-full glass flex items-center justify-center text-slate-700 hover:text-orange-500 transition"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/255677472870" target="_blank" class="w-11 h-11 rounded-full glass flex items-center justify-center text-slate-700 hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:nazarethdominic189@gmail.com" class="w-11 h-11 rounded-full glass flex items-center justify-center text-slate-700 hover:text-orange-500 transition"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="grid grid-cols-3 gap-4">
                     <div class="glass p-6 rounded-[2rem] text-center">
-                        <i class="fas fa-terminal text-cyan-400 text-2xl mb-3"></i>
-                        <h4 class="text-3xl font-black text-white mb-1">2+</h4>
-                        <p class="text-slate-500 uppercase tracking-[0.15em] text-[9px] font-black">Years Coding</p>
+                        <i class="fas fa-terminal text-orange-500 text-2xl mb-3"></i>
+                        <h4 class="text-3xl font-black text-slate-900 mb-1">2+</h4>
+                        <p class="text-slate-500 uppercase tracking-widest text-[9px] font-black">Years Coding</p>
                     </div>
                     <div class="glass p-6 rounded-[2rem] text-center">
-                        <i class="fas fa-cubes text-emerald-400 text-2xl mb-3"></i>
-                        <h4 class="text-3xl font-black text-white mb-1">6+</h4>
-                        <p class="text-slate-500 uppercase tracking-[0.15em] text-[9px] font-black">Projects</p>
+                        <i class="fas fa-cubes text-teal-600 text-2xl mb-3"></i>
+                        <h4 class="text-3xl font-black text-slate-900 mb-1">6+</h4>
+                        <p class="text-slate-500 uppercase tracking-widest text-[9px] font-black">Projects</p>
                     </div>
                     <div class="glass p-6 rounded-[2rem] text-center">
-                        <i class="fas fa-microchip text-blue-400 text-2xl mb-3"></i>
-                        <h4 class="text-3xl font-black text-white mb-1">300+</h4>
-                        <p class="text-slate-500 uppercase tracking-[0.15em] text-[9px] font-black">Commits</p>
+                        <i class="fas fa-code-commit text-orange-500 text-2xl mb-3"></i>
+                        <h4 class="text-3xl font-black text-slate-900 mb-1">300+</h4>
+                        <p class="text-slate-500 uppercase tracking-widest text-[9px] font-black">Commits</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="mb-32">
-            <div class="text-center mb-20">
-                <h2 class="text-cyan-400 font-bold text-xs uppercase tracking-[0.5em] mb-4">Software Solutions</h2>
-                <h3 class="text-5xl font-black text-white">The Project Vault</h3>
+            <div class="text-center mb-16">
+                <h2 class="text-orange-500 font-bold text-xs uppercase tracking-[0.5em] mb-4">Software Solutions</h2>
+                <h3 class="text-3xl md:text-4xl font-black text-slate-900">Featured Projects</h3>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass project-card group overflow-hidden rounded-[2.5rem] transition-all duration-500">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?auto=format&fit=crop&w=800" class="project-image w-full h-full object-cover transition-transform duration-700 opacity-40">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030b12] to-transparent"></div>
-                        <span class="absolute top-6 left-6 px-3 py-1 glass text-white text-[9px] font-black rounded-full uppercase">Election Management</span>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="glass project-card card-hover overflow-hidden rounded-[2rem] flex flex-col">
+                    <div class="h-56 overflow-hidden relative project-image-container border-b border-slate-200">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop" alt="Housing Project Dashboard" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                     </div>
-                    <div class="p-8">
-                        <h4 class="text-xl font-bold text-white mb-3">Voting Management</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">A secure platform utilizing JavaScript validation and optimized SQL schemas for student election processes.</p>
-                        <div class="flex flex-wrap gap-2 text-[9px] font-black text-cyan-400 mb-6">
-                            <span>JS</span> • <span>SQL</span> • <span>UI/UX</span>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-extrabold text-slate-950 mb-3 tracking-tight">Housing by Dominic</h4>
+                            <p class="text-slate-700 text-base leading-relaxed mb-6 font-medium">A modern property listing platform designed for seamless real estate discovery with a focus on clean user experience.</p>
                         </div>
-                        <a href="https://github.com/DOMINIC426" target="_blank" class="text-xs font-black text-white hover:text-cyan-400 transition uppercase tracking-widest">View Repo →</a>
+                        <a href="https://housingbydominic.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-black text-orange-500 hover:text-orange-600 transition uppercase tracking-widest group">
+                            Visit Live Site <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
                     </div>
                 </div>
 
-                <div class="glass project-card group overflow-hidden rounded-[2.5rem] transition-all duration-500">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800" class="project-image w-full h-full object-cover transition-transform duration-700 opacity-40">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030b12] to-transparent"></div>
-                        <span class="absolute top-6 left-6 px-3 py-1 glass text-white text-[9px] font-black rounded-full uppercase">API Integration</span>
+                <div class="glass project-card card-hover overflow-hidden rounded-[2rem] flex flex-col">
+                    <div class="h-56 overflow-hidden relative project-image-container border-b border-slate-200">
+                        <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=800&auto=format&fit=crop" alt="Digital Bible App Interface" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                     </div>
-                    <div class="p-8">
-                        <h4 class="text-xl font-bold text-white mb-3">Weather Analytics</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Spring Boot application integrating OpenWeatherMap API to provide real-time global weather data.</p>
-                        <div class="flex flex-wrap gap-2 text-[9px] font-black text-blue-400 mb-6">
-                            <span>SPRING BOOT</span> • <span>REST</span> • <span>JSON</span>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-2xl font-extrabold text-slate-950 mb-3 tracking-tight">Dominic Online Bible</h4>
+                            <p class="text-slate-700 text-base leading-relaxed mb-6 font-medium">A responsive web application built for spiritual reflection, allowing users to access and read scripture efficiently.</p>
                         </div>
-                        <a href="https://github.com/DOMINIC426" target="_blank" class="text-xs font-black text-white hover:text-cyan-400 transition uppercase tracking-widest">View Repo →</a>
-                    </div>
-                </div>
-
-                <div class="glass project-card group overflow-hidden rounded-[2.5rem] transition-all duration-500">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1550565118-3d143c00368c?auto=format&fit=crop&w=800" class="project-image w-full h-full object-cover transition-transform duration-700 opacity-40">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030b12] to-transparent"></div>
-                        <span class="absolute top-6 left-6 px-3 py-1 glass text-white text-[9px] font-black rounded-full uppercase">Java Service</span>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-xl font-bold text-white mb-3">Student ID Gen</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Custom ID generation service for the Pocket Money project using SequenceStyleGenerator logic.</p>
-                        <div class="flex flex-wrap gap-2 text-[9px] font-black text-emerald-400 mb-6">
-                            <span>JAVA</span> • <span>HIBERNATE</span> • <span>JPA</span>
-                        </div>
-                        <a href="https://github.com/DOMINIC426" target="_blank" class="text-xs font-black text-white hover:text-cyan-400 transition uppercase tracking-widest">View Repo →</a>
-                    </div>
-                </div>
-
-                <div class="glass project-card group overflow-hidden rounded-[2.5rem] transition-all duration-500">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800" class="project-image w-full h-full object-cover transition-transform duration-700 opacity-40">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030b12] to-transparent"></div>
-                        <span class="absolute top-6 left-6 px-3 py-1 glass text-white text-[9px] font-black rounded-full uppercase">Frontend</span>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-xl font-bold text-white mb-3">Portfolio Website</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">A high-performance personal brand site built with Tailwind CSS and Font Awesome icon systems.</p>
-                        <div class="flex flex-wrap gap-2 text-[9px] font-black text-orange-400 mb-6">
-                            <span>TAILWIND</span> • <span>HTML5</span> • <span>RESPONSIVE</span>
-                        </div>
-                        <a href="https://github.com/DOMINIC426" target="_blank" class="text-xs font-black text-white hover:text-cyan-400 transition uppercase tracking-widest">View Repo →</a>
-                    </div>
-                </div>
-
-                <div class="glass project-card group overflow-hidden rounded-[2.5rem] transition-all duration-500">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc4b?auto=format&fit=crop&w=800" class="project-image w-full h-full object-cover transition-transform duration-700 opacity-40">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030b12] to-transparent"></div>
-                        <span class="absolute top-6 left-6 px-3 py-1 glass text-white text-[9px] font-black rounded-full uppercase">Backend</span>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-xl font-bold text-white mb-3">Employee Management</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">A robust REST API for enterprise data management featuring MariaDB and Spring Data JPA.</p>
-                        <div class="flex flex-wrap gap-2 text-[9px] font-black text-green-400 mb-6">
-                            <span>SPRING DATA</span> • <span>MARIADB</span> • <span>API</span>
-                        </div>
-                        <a href="https://github.com/DOMINIC426" target="_blank" class="text-xs font-black text-white hover:text-cyan-400 transition uppercase tracking-widest">View Repo →</a>
-                    </div>
-                </div>
-
-                <div class="glass project-card group overflow-hidden rounded-[2.5rem] transition-all duration-500">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800" class="project-image w-full h-full object-cover transition-transform duration-700 opacity-40">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030b12] to-transparent"></div>
-                        <span class="absolute top-6 left-6 px-3 py-1 glass text-white text-[9px] font-black rounded-full uppercase">Core Logic</span>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-xl font-bold text-white mb-3">Algorithm Design</h4>
-                        <p class="text-slate-400 text-xs leading-relaxed mb-6">Advanced C++ implementations of sorting, searching, and memory management algorithms.</p>
-                        <div class="flex flex-wrap gap-2 text-[9px] font-black text-red-400 mb-6">
-                            <span>C++</span> • <span>ALGORITHMS</span> • <span>DATA STRUC</span>
-                        </div>
-                        <a href="https://github.com/DOMINIC426" target="_blank" class="text-xs font-black text-white hover:text-cyan-400 transition uppercase tracking-widest">View Repo →</a>
+                        <a href="https://dominic-online-bible.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-black text-orange-500 hover:text-orange-600 transition uppercase tracking-widest group">
+                            Visit Live Site <span class="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="mb-32">
-            <div class="grid lg:grid-cols-2 gap-20 items-center">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-cyan-400 font-bold text-xs uppercase tracking-[0.4em] mb-4">Journey So Far</h2>
-                    <h3 class="text-4xl font-black text-white mb-8">Experience</h3>
+                    <h2 class="text-orange-500 font-bold text-xs uppercase tracking-[0.4em] mb-4">Journey So Far</h2>
+                    <h3 class="text-3xl font-black text-slate-900 mb-8">Education &amp; Skills</h3>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4 p-5 glass rounded-2xl">
-                            <i class="fas fa-user-graduate text-cyan-400 text-xl"></i>
+                            <i class="fas fa-graduation-cap text-orange-500 text-2xl"></i>
                             <div>
-                                <h5 class="text-white font-bold text-sm">CS Student — University of Dodoma</h5>
-                                <p class="text-[10px] text-slate-500 font-black uppercase">College of Informatics (CIVE) | Ongoing</p>
+                                <h5 class="text-slate-900 font-bold text-sm">CS Student — University of Dodoma</h5>
+                                <p class="text-xs text-slate-500 font-semibold">College of Informatics and Virtual Education (CIVE)</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4 p-5 glass rounded-2xl">
-                            <i class="fab fa-java text-emerald-400 text-xl"></i>
+                            <i class="fab fa-java text-teal-600 text-2xl"></i>
                             <div>
-                                <h5 class="text-white font-bold text-sm">Java &amp; Spring Boot</h5>
-                                <p class="text-[10px] text-slate-500 font-black uppercase">REST APIs | Thymeleaf | Security</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 p-5 glass rounded-2xl">
-                            <i class="fas fa-terminal text-blue-400 text-xl"></i>
-                            <div>
-                                <h5 class="text-white font-bold text-sm">OS &amp; Tooling</h5>
-                                <p class="text-[10px] text-slate-500 font-black uppercase">Kali Linux | Git | Maven | SQL</p>
+                                <h5 class="text-slate-900 font-bold text-sm">Backend Architecture</h5>
+                                <p class="text-xs text-slate-500 font-semibold">Java, Spring Boot, REST APIs, PostgreSQL</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="p-1 glass rounded-[3rem] group">
-                    <div class="p-10 bg-cyan-500/5 rounded-[2.8rem] border border-cyan-500/10 transition-all group-hover:bg-cyan-500/10">
-                        <h4 class="text-2xl font-black text-white mb-2">Learning Roadmap</h4>
-                        <p class="text-slate-500 text-xs mb-10">From backend architect to full-stack cross-platform mobility.</p>
-
-                        <div class="flex items-center gap-6">
-                            <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center text-cyan-400 text-3xl">
-                                <i class="fas fa-mobile-screen-button"></i>
-                            </div>
-                            <div>
-                                <span class="text-[10px] font-black text-cyan-400 uppercase tracking-widest block mb-1">Upcoming Focus</span>
-                                <h5 class="text-white text-xl font-bold">Flutter &amp; Dart</h5>
-                            </div>
+                <div class="glass p-8 rounded-[2rem]">
+                    <h4 class="text-xl font-black text-slate-900 mb-2">Learning Roadmap</h4>
+                    <p class="text-slate-500 text-xs mb-6">Expanding backend systems design into mobile platforms.</p>
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-100 border border-slate-200">
+                        <i class="fas fa-mobile-screen text-orange-500 text-2xl"></i>
+                        <div>
+                            <span class="text-[10px] font-black text-orange-500 uppercase tracking-widest block">Current Focus</span>
+                            <h5 class="text-slate-900 text-sm font-bold">Flutter &amp; Mobile App Development</h5>
                         </div>
                     </div>
                 </div>
@@ -313,53 +310,35 @@
 
     </main>
 
-    <footer id="contact" class="bg-[#020810] pt-32 pb-16 px-6 border-t border-cyan-500/10 relative">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/5 blur-[120px]"></div>
-        <div class="max-w-7xl mx-auto relative">
-            <div class="grid lg:grid-cols-2 gap-20 mb-24">
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="bg-slate-900 text-white pt-20 pb-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 mb-16">
                 <div>
-                    <h2 class="text-6xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9]">Let's build <br><span class="text-gradient">excellence.</span></h2>
-                    <p class="text-slate-500 max-w-sm mb-12 text-sm leading-relaxed">Currently seeking industrial practical training and collaborative systems engineering roles.</p>
-
-                    <div class="space-y-8">
-                        <div class="flex items-center gap-6 group">
-                            <div class="w-14 h-14 glass rounded-3xl flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-[#031018] transition-all duration-500"><i class="fas fa-phone"></i></div>
-                            <div>
-                                <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Available At</p>
-                                <p class="text-white font-bold text-lg leading-none mt-1">0677 472 870 | 0745 245 228</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-6 group">
-                            <div class="w-14 h-14 glass rounded-3xl flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-[#031018] transition-all duration-500"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <p class="text-[10px] text-slate-500 uppercase font-black tracking-widest">Professional Inquiry</p>
-                                <p class="text-white font-bold text-lg leading-none mt-1">nazarethdominic189@gmail.com</p>
-                            </div>
-                        </div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">Let's work together.</h2>
+                    <p class="text-slate-400 max-w-sm mb-8 text-sm leading-relaxed">Available for software engineering opportunities, collaboration, and practical training roles.</p>
+                    <div class="space-y-4 text-slate-300 text-sm">
+                        <p><i class="fas fa-phone text-orange-500 mr-3"></i>0745 245 228 | 0677 472 870</p>
+                        <p><i class="fas fa-envelope text-orange-500 mr-3"></i>nazarethdominic189@gmail.com</p>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-12">
-                    <div>
-                        <h4 class="text-white font-black mb-8 uppercase tracking-[0.3em] text-[10px]">Resources</h4>
-                        <ul class="space-y-4 text-slate-500 text-xs font-bold">
-                            <li><a href="https://github.com/DOMINIC426" class="hover:text-white transition">GITHUB REPOS</a></li>
-                            <li><a href="https://wa.me/255784505948" class="hover:text-white transition">WHATSAPP CHAT</a></li>
-                            <li><a href="mailto:nazarethdominic189@gmail.com" class="hover:text-white transition">EMAIL ME</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-black mb-8 uppercase tracking-[0.3em] text-[10px]">Location</h4>
-                        <p class="text-slate-500 text-xs font-bold leading-loose uppercase">Dodoma, Tanzania<br>College of Informatics (CIVE)<br>University of Dodoma</p>
-                    </div>
+                <!-- Formspree Direct Contact Form -->
+                <div>
+                    <form action="https://formspree.io/f/nazarethdominic189@gmail.com" method="POST" class="space-y-4">
+                        <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 text-sm">
+                        <input type="email" name="_replyto" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 text-sm">
+                        <textarea name="message" rows="4" placeholder="Your Message" required class="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-orange-500 text-sm"></textarea>
+                        <button type="submit" class="w-full py-3 bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg transition text-sm">Send Message</button>
+                    </form>
                 </div>
             </div>
 
-            <div class="pt-12 border-t border-cyan-500/10 flex flex-col md:flex-row justify-between items-center gap-8">
-                <p class="text-slate-600 text-[9px] uppercase tracking-[0.6em] font-black">&copy; 2026 Dominic Nazareth • Software Engineer</p>
-                <div class="flex gap-8 text-slate-500">
-                    <a href="https://github.com/DOMINIC426" class="hover:text-cyan-400 transition text-2xl"><i class="fab fa-github"></i></a>
-                    <a href="https://wa.me/255784505948" class="hover:text-cyan-400 transition text-2xl"><i class="fab fa-whatsapp"></i></a>
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; 2026 Dominic Nazareth • Software Engineer</p>
+                <div class="flex gap-6 text-xl">
+                    <a href="https://github.com/DOMINIC426" target="_blank" class="hover:text-orange-500 transition"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/255677472870" target="_blank" class="hover:text-green-500 transition"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
